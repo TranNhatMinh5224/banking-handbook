@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Cẩm Nang Nghiệp Vụ Ngân Hàng Toàn Tập</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Hệ thống hóa toàn diện 22 phân hệ nghiệp vụ ngân hàng cốt lõi và kinh doanh tài chính">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+  <!-- Google Fonts: Be Vietnam Pro & Inter for beautiful Vietnamese typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Docsify Themeable Stylesheet -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
+
+  <style>
+    :root {
+      /* Typography */
+      --base-font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --code-font-family: 'JetBrains Mono', Consolas, Monaco, monospace;
+      --base-font-size: 15.5px;
+      --base-line-height: 1.75;
+      
+      /* Theme Colors - Professional Banking Navy / Slate Palette */
+      --theme-color: #0284c7;
+      --theme-color-dark: #0369a1;
+      --heading-color: #0f172a;
+      --text-color: #334155;
+      --text-color-light: #64748b;
+      
+      /* Sidebar */
+      --sidebar-width: 320px;
+      --sidebar-background: #f8fafc;
+      --sidebar-border-color: #e2e8f0;
+      --sidebar-name-color: #0f172a;
+      --sidebar-nav-link-color: #334155;
+      --sidebar-nav-link-color--active: #0284c7;
+      --sidebar-nav-link-font-weight--active: 600;
+
+      /* Content Area */
+      --content-max-width: 58em;
+      --blockquote-border-color: #0284c7;
+      --blockquote-background: #f0f9ff;
+      --code-inline-background: #f1f5f9;
+      --code-inline-color: #0369a1;
+
+      /* Tables */
+      --table-cell-padding: 10px 14px;
+      --table-head-background: #f1f5f9;
+      --table-row-even-background: #f8fafc;
+    }
+
+    body {
+      letter-spacing: -0.01em;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Cover Page Styling */
+    section.cover {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0369a1 100%) !important;
+      color: #ffffff !important;
+    }
+    section.cover .cover-main {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    section.cover h1 {
+      color: #ffffff !important;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5em;
+    }
+    section.cover blockquote {
+      color: #cbd5e1 !important;
+      font-size: 1.25rem;
+      border-left: 4px solid #38bdf8;
+      background: rgba(255, 255, 255, 0.05) !important;
+      padding: 1rem 1.5rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1.5rem 0;
+    }
+    section.cover ul {
+      color: #e2e8f0;
+      font-size: 1.05rem;
+      line-height: 2;
+    }
+    section.cover p a {
+      border: 2px solid #38bdf8 !important;
+      background: #0284c7 !important;
+      color: #ffffff !important;
+      font-weight: 600 !important;
+      border-radius: 24px !important;
+      padding: 0.75rem 2rem !important;
+      margin: 0.5rem !important;
+      transition: all 0.25s ease !important;
+      box-shadow: 0 4px 14px 0 rgba(2, 132, 199, 0.39);
+    }
+    section.cover p a:last-child {
+      background: transparent !important;
+      border-color: #94a3b8 !important;
+      color: #f1f5f9 !important;
+      box-shadow: none;
+    }
+    section.cover p a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(2, 132, 199, 0.5);
+    }
+
+    /* Sidebar Tweaks */
+    .sidebar {
+      border-right: 1px solid #e2e8f0;
+      font-size: 0.92rem;
+    }
+    .app-name-link {
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: #0f172a !important;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .sidebar-nav strong {
+      display: block;
+      margin-top: 1.1rem;
+      margin-bottom: 0.3rem;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #64748b;
+      font-weight: 700;
+    }
+    .sidebar-nav ul li a {
+      border-radius: 6px;
+      padding: 5px 8px;
+      margin: 1px 0;
+      transition: background 0.15s ease;
+    }
+    .sidebar-nav ul li a:hover {
+      background: #e2e8f0;
+      color: #0284c7;
+    }
+
+    /* Reading view enhancement */
+    .markdown-section h1 {
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: #0f172a;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.4em;
+      margin-top: 1em;
+    }
+    .markdown-section h2 {
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-top: 1.8em;
+      border-bottom: 1px solid #f1f5f9;
+      padding-bottom: 0.3em;
+    }
+    .markdown-section h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #334155;
+      margin-top: 1.4em;
+    }
+    .markdown-section table {
+      display: table;
+      width: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+      margin: 1.5em 0;
+    }
+    .markdown-section blockquote {
+      border-left: 4px solid #0284c7;
+      background: #f0f9ff;
+      padding: 12px 18px;
+      border-radius: 0 8px 8px 0;
+      color: #0369a1;
+      margin: 1.5em 0;
+    }
+
+    /* Floating Reading Bar */
+    #reading-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: #0284c7;
+      z-index: 9999;
+      transition: width 0.1s ease;
+    }
+  </style>
+</head>
+<body>
+  <div id="reading-progress"></div>
+  <div id="app">Đang tải sách cẩm nang ngân hàng...</div>
+
+  <script>
+    window.$docsify = {
+      name: '🏛️ Banking Handbook',
+      repo: '',
+      loadSidebar: true,
+      subMaxLevel: 2,
+      sidebarDisplayLevel: 0, // Collapsed by default for a clean book TOC
+      coverpage: true,
+      auto2top: true,
+      
+      // Full-text search
+      search: {
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: '🔍 Tìm kiếm chuyên đề ngân hàng...',
+        noData: '❌ Không tìm thấy nội dung phù hợp!',
+        depth: 3,
+        hideOtherSidebarContent: false
+      },
+
+      // Pagination (Prev / Next buttons)
+      pagination: {
+        previousText: '⬅️ Bài trước',
+        nextText: 'Bài tiếp theo ➡️',
+        crossChapter: true,
+        crossChapterText: true
+      },
+
+      // Copy Code
+      copyCode: {
+        buttonText: '📋 Sao chép',
+        errorText: 'Lỗi',
+        successText: 'Đã chép'
+      }
+    }
+  </script>
+
+  <!-- Docsify Core -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+
+  <!-- Docsify Themeable -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+
+  <!-- Search Plugin -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+
+  <!-- Zoom Image Plugin -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
+
+  <!-- Copy Code Plugin -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+
+  <!-- Pagination Plugin -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+
+  <!-- Sidebar Collapse Plugin -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+
+  <!-- Reading Progress Bar -->
+  <script>
+    window.addEventListener('scroll', function() {
+      var h = document.documentElement,
+          b = document.body,
+          st = 'scrollTop',
+          sh = 'scrollHeight';
+      var percent = (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
+      var bar = document.getElementById('reading-progress');
+      if (bar) bar.style.width = percent + '%';
+    });
+  </script>
+</body>
+</html>

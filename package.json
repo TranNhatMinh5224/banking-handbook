@@ -1,0 +1,20 @@
+{
+  "name": "banking-handbook",
+  "version": "1.0.0",
+  "description": "Cẩm nang 22 phân hệ nghiệp vụ ngân hàng cốt lõi & kinh doanh tài chính",
+  "scripts": {
+    "start": "npx -y serve . -l 3000",
+    "dev": "npx -y serve . -l 3000",
+    "docsify": "npx -y docsify-cli serve . --port 3000",
+    "generate-sidebar": "node generate_sidebar.js"
+  },
+  "keywords": [
+    "banking",
+    "handbook",
+    "finance",
+    "fintech",
+    "docsify"
+  ],
+  "author": "",
+  "license": "MIT"
+}
