@@ -10,4 +10,4 @@
 - 📊 **Từ Điển Thuật Ngữ Chuyên Ngành** chuẩn xác cho từng mảng nghiệp vụ
 
 [📖 Bắt Đầu Đọc Ngay](README.md)
-[⭐ Xem Trên GitHub](https://github.com/)
+[⭐ Xem Trên GitHub](https://github.com/TranNhatMinh5224/banking-handbook)
